@@ -1,5 +1,3 @@
-import animate from '@tailwindcss/animation'
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -10,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        fontPrimary: ['var(--font-primary)'],
+        fontSecondary: ['var(--font-secondary)'],
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -59,5 +61,5 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [require('tailwindcss-animate')],
 }
