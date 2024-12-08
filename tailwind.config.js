@@ -27,10 +27,7 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        backgroundImage: {
-          bg__gradient:
-            'linear-gradient(110.87deg, rgba(78,92, 189,.2) 7.78%, rgba(17,18,28, 0) 86.01%)',
-        },
+
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
