@@ -10,7 +10,7 @@ export const BaseInfo = {
 export const aboutInfo = {
   title: 'Crafting Web Application with Passion and Precision',
   description:
-    'Highly Motivated Junior Front-End Web Developer with a Strong Foundation in HTML, CSS, JavaScript. Eager to Contribute to Creativity and Technical Skills to Dynamic Projects Enhancing Experiences Through Responsive and Visually Appealing Web Design Interface.',
+    'I am a passionate and dedicated Junior Front-End Web Developer with expertise in building responsive, user-friendly, and visually appealing web applications. Proficient in modern web technologies like HTML5, CSS3, TailwindCSS, Bootstrap, and Sass, I strive to craft seamless user experiences.In addition to my front-end skills, I have experience with JavaScript frameworks such as React.js, Next.js, and backend technologies like Node.js, Express.js, Firebase, and MongoDB. I enjoy tackling new challenges, learning cutting-edge tools, and contributing to innovative projects that make a difference.With a strong commitment to growth and creativity, I aim to create web solutions that not only meet functional requirements but also inspire and engage users.',
   client: '50+',
   experience: '3+',
   project: '200+',
