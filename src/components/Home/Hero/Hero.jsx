@@ -1,53 +1,49 @@
 import { BaseInfo } from '@/assets/Data/Data'
+import { Button } from '@/components/ui/Button'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export const Hero = () => {
   return (
-    <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-items-center gap-8 px-8 mt-24 md:mt-28">
+    <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-items-center gap-8 px-4 md:px-8 mt-24 md:mt-28">
       <div className="flex flex-col order-2 md:order-1 gap-6 md:gap-8 md:justify-self-start">
         <div className="flex flex-col space-y-4">
           <span className="text-lg font-semibold uppercase">
             Hello, My Name is
           </span>
-          <h1 className="text__bg text-3xl md:text-6xl uppercase font-semibold font-fontSecondary">
+          <h1 className=" text-3xl md:text-6xl uppercase font-semibold font-fontSecondary">
             {BaseInfo.name}
           </h1>
-          <h2 className="text-xl font-semibold">{BaseInfo.position}</h2>
-          <p className="text-base font-light text-justify">
+          <h2 className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent text-lg md:text-xl font-semibold uppercase">
+            {BaseInfo.position}
+          </h2>
+          <p className="text-base font-light text-justify text-popover-foreground">
             ` I am a{' '}
-            <strong className="font-bold">
+            <strong className="font-semibold ">
               Junior Front-End Web Developer
             </strong>{' '}
-            based in Faridpur District, Faridpur, Dhaka Division, Bangladesh. I
-            specialize in modern web development technologies such as HTML5,
+            based in
+            <strong className="font-semibold">
+              {' '}
+              Faridpur District, Dhaka Division, Bangladesh.
+            </strong>{' '}
+            I specialize in modern web development technologies such as HTML5,
             CSS3, TailwindCSS, Bootstrap, Sass, JavaScript, and frameworks like
             React.js and Next.js. My backend expertise includes Node.js,
             Express.js, Firebase, and MongoDB. `
           </p>
         </div>
 
-        <button
-          className="mb-6 text-left"
-          style={{ backgroundSize: '200% auto' }}
-        >
-          <Link
-            suppressHydrationWarning
-            href="#_"
-            className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group"
-          >
-            <span className="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
-            <span className="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
-              <span className="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
-              <span className="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
-            </span>
-            <span className="relative text-white">Download CV</span>
-          </Link>
-        </button>
+        <Link href="#">
+          <Button variant="btn" style={{ backgroundSize: '200% auto' }}>
+            {' '}
+            Download CV
+          </Button>
+        </Link>
       </div>
-      <div className="relative order-1 md:order-2 justify-self-center mb-16 md:mb-0  md:mt-0 before:content-[''] before:bg-secondary before:w-[70%] before:h-[70%] before:absolute before:top-[10rem] before:left-[12rem] before:rounded-full">
+      <div className="relative order-1 md:order-2 justify-self-center mb-16 md:mb-0  md:mt-0 before:content-[''] before:bg-accent before:w-[85%] md:before:w-[70%] before:h-[85%] md:before:h-[70%] before:absolute before:top-[5rem] md:before:top-[10rem] before:left-[4rem] md:before:left-[12rem] before:rounded-full">
         <div className="relative p-2 border-4 rounded-full border-border">
-          <div className="overflow-hidden rounded-full shadow-lg">
+          <div className="overflow-hidden rounded-full shadow-lg z-50">
             <Image
               src="/avatars/profile.png"
               alt="profile"

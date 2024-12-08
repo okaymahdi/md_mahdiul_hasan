@@ -31,7 +31,7 @@ export const Navbar = () => {
         onClick={() => handleLinkClick(id)}
         className="text-sm font-semibold  transition-all duration-300 hover:text-popover-foreground cursor-pointer"
       >
-        {label}
+        <Button variant="link">{label}</Button>
       </Link>
     ))
 
@@ -42,7 +42,7 @@ export const Navbar = () => {
         href={href}
         target="_blank"
         aria-label={label}
-        className="text-sm font-semibold  transition-all duration-300 hover:text-primary cursor-pointer"
+        className="text-lg font-semibold  transition-all duration-300 text-accent-foreground hover:text-muted-foreground p-[0.5px] cursor-pointer"
       >
         {icon}
       </Link>
@@ -61,11 +61,15 @@ export const Navbar = () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
   return (
     <nav
       className={`${
-        navBg ? 'bg-accent' : 'bg-background'
-      } container mx-auto w-full flex shrink-0 justify-between items-center py-4 px-8  shadow-md dark:shadow-2xl fixed top-0 left-1/2 -translate-x-1/2 z-50 transition duration-300 delay-100 ease-in-out`}
+        navBg
+          ? 'bg-slate-50 dark:bg-senary scroll-smooth'
+          : 'bg-background dark:bg-quinary/30'
+      } container mx-auto w-full flex shrink-0 justify-between items-center py-4 px-4 md:px-8 shadow-md dark:shadow-2xl fixed top-0 left-1/2 
+    -translate-x-1/2 z-50`}
     >
       {/* Logo */}
 
@@ -73,13 +77,16 @@ export const Navbar = () => {
         <h2 className="heading__title ">Mh</h2>
       </Link>
 
-      <div className="hidden md:flex  space-x-6">{renderLinks()}</div>
+      <div className="hidden md:flex items-center space-x-16">
+        {renderLinks()}
+      </div>
       <div className="hidden md:flex items-center  gap-4">
         <div className="flex items-center gap-4">{renderSocilaIcons()}</div>
         <ModeToggle />
       </div>
 
       {/* Mobile Menu */}
+
       <div className="z-30 md:hidden flex items-center gap-2">
         <ModeToggle />
         <Button variant="outline" onClick={handleMenuToggle}>
@@ -88,7 +95,7 @@ export const Navbar = () => {
       </div>
 
       <div
-        className={`absolute top-16 left-0 z-10 md:hidden bg-background p-4 w-full transition-all duration-300 ease-in-out ${
+        className={`absolute top-16 left-0 inset-0 md:hidden bg-background bg-fixed p-4 w-full h-screen transition-all duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-y-0 opacity-100' : '-translate-y-[200%] opacity-0'
         }`}
       >

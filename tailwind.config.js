@@ -13,11 +13,23 @@ module.exports = {
         fontSecondary: ['var(--font-secondary)'],
       },
       colors: {
+        tertiary: '#0f0715',
+        quaternary: '#050709',
+        quinary: '#080d27',
+        senary: '#12192F',
+        septenary: '#FFD166',
+        octonary: '#33D9B2',
+        nonary: '#6A3093',
+        denary: '#82368C',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
+        },
+        backgroundImage: {
+          bg__gradient:
+            'linear-gradient(110.87deg, rgba(78,92, 189,.2) 7.78%, rgba(17,18,28, 0) 86.01%)',
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
