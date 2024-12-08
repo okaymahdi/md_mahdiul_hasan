@@ -49,10 +49,11 @@ export const Hero = () => {
         <div className="relative p-2 border-4 rounded-full border-border">
           <div className="overflow-hidden rounded-full shadow-lg">
             <Image
-              src={'/avatars/profile.png'}
+              src="/avatars/profile.png"
               alt="profile"
               width={380}
               height={380}
+              priority
               className="transform hover:scale-110 duration-500"
             />
           </div>

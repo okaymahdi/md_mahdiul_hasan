@@ -1,6 +1,6 @@
 'use client'
 import { NavLinks, SocialLinks } from '@/assets/Constants/Constants'
-import { Button } from '@/Components/ui/button'
+import { Button } from '@/components/ui/Button'
 import { MenuIcon, X } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
