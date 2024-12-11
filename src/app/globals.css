@@ -177,7 +177,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border box-border m-0 p-0;
   }
   body {
     @apply bg-background text-foreground flex flex-col justify-center min-h-screen m-0 mx-auto p-0 font-fontPrimary select-none;

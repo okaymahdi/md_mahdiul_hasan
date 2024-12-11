@@ -11,7 +11,12 @@ export const Skills = () => {
   const toggleShowAllSkills = () => {
     setShowAllSkills(!showAllSkills)
   }
-  const displayedSkills = showAllSkills ? SkillsData : SkillsData.slice(0, 3)
+
+  const displayedSkills = showAllSkills
+    ? SkillsData
+    : window.innerWidth >= 768
+    ? SkillsData.slice(0, 4)
+    : SkillsData.slice(0, 3)
 
   return (
     <section
@@ -20,7 +25,7 @@ export const Skills = () => {
     >
       <SectionHeading>My Skills</SectionHeading>
 
-      <div className="grid lg:hidden place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-16 mb-6">
+      <div className="grid lg:hidden place-items-center grid-cols-2 sm:grid-cols-3 gap-8 mb-6">
         {displayedSkills.map((skill) => (
           <ProgressCicular
             key={skill.id}
@@ -37,7 +42,7 @@ export const Skills = () => {
         </Button>
       </div>
 
-      <div className="hidden lg:grid place-items-center grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6">
+      <div className="hidden lg:grid place-items-center grid-cols-4 gap-8 mb-6">
         {SkillsData.map((skill) => (
           <ProgressCicular
             key={skill.id}

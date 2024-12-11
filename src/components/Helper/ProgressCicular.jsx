@@ -23,7 +23,7 @@ const ProgressCircular = ({ title, percentage }) => {
   }, [percentage])
 
   return (
-    <div className="relative w-52 md:w-56 h-52 md:h-56">
+    <div className="relative w-40 md:w-48 h-40 md:h-48">
       {/* Text content */}
       <div className="absolute inset-0 rounded-full bg__gradient">
         <div className="absolute z-10 flex flex-col items-center justify-center w-full h-full text-center">
