@@ -12,11 +12,7 @@ export const Skills = () => {
     setShowAllSkills(!showAllSkills)
   }
 
-  const displayedSkills = showAllSkills
-    ? SkillsData
-    : window.innerWidth >= 768
-    ? SkillsData.slice(0, 4)
-    : SkillsData.slice(0, 3)
+  const displayedSkills = showAllSkills ? SkillsData : SkillsData.slice(0, 4)
 
   return (
     <section
