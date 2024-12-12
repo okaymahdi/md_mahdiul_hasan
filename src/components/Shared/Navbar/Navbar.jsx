@@ -29,7 +29,7 @@ export const Navbar = () => {
         key={`#${id}`}
         href={`#${id}`}
         onClick={() => handleLinkClick(id)}
-        className="text-sm font-semibold  transition-all duration-300 hover:text-popover-foreground cursor-pointer"
+        className="text-sm font-semibold hover:text-ring transition-all duration-300 delay-300 cursor-pointer"
       >
         <Button variant="link">{label}</Button>
       </Link>
@@ -42,7 +42,7 @@ export const Navbar = () => {
         href={href}
         target="_blank"
         aria-label={label}
-        className="text-lg font-semibold  transition-all duration-300 text-accent-foreground hover:text-muted-foreground p-[0.5px] cursor-pointer"
+        className="text-lg font-semibold hover:text-ring p-[0.5px] cursor-pointer transition-all duration-300 delay-300"
       >
         {icon}
       </Link>
@@ -80,7 +80,7 @@ export const Navbar = () => {
       <div className="hidden md:flex items-center space-x-16">
         {renderLinks()}
       </div>
-      <div className="hidden md:flex items-center  gap-4">
+      <div className="hidden md:flex items-center gap-4">
         <div className="flex items-center gap-4">{renderSocilaIcons()}</div>
         <ModeToggle />
       </div>

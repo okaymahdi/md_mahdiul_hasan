@@ -34,7 +34,11 @@ export const Hero = () => {
           </p>
         </div>
 
-        <Link href="#">
+        <Link
+          href="/cv/MD.MAHDIUL_HASAN_Resume.pdf"
+          download="MD.MAHDIUL_HASAN_Resume.pdf"
+          target="_blank"
+        >
           <Button variant="btn" style={{ backgroundSize: '200% auto' }}>
             {' '}
             Download CV

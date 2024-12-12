@@ -7,6 +7,6 @@ export const ProjectsData = [
     image: '/img/car__banner.svg',
     livePreview: '#',
     githubLink: '#',
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
   },
 ]

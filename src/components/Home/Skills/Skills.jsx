@@ -21,7 +21,7 @@ export const Skills = () => {
     >
       <SectionHeading>My Skills</SectionHeading>
 
-      <div className="grid lg:hidden place-items-center grid-cols-2 sm:grid-cols-3 gap-8 mb-6">
+      <div className="grid place-items-center grid-cols-2 sm:grid-cols-4 gap-8 mb-6">
         {displayedSkills.map((skill) => (
           <ProgressCicular
             key={skill.id}
@@ -32,21 +32,10 @@ export const Skills = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-12 lg:hidden">
+      <div className="flex justify-center mt-12">
         <Button variant="btn" onClick={toggleShowAllSkills}>
           {showAllSkills ? 'Show Less' : 'Show More'}
         </Button>
-      </div>
-
-      <div className="hidden lg:grid place-items-center grid-cols-4 gap-8 mb-6">
-        {SkillsData.map((skill) => (
-          <ProgressCicular
-            key={skill.id}
-            title={skill.title}
-            percentage={skill.percentage}
-            className="w-full h-full"
-          />
-        ))}
       </div>
     </section>
   )
