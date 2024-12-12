@@ -2,9 +2,8 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export const NavLinks = [
   { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
 ]
 
 export const SocialLinks = [

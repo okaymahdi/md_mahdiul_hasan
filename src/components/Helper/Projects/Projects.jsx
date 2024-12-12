@@ -10,7 +10,10 @@ export const Projects = () => {
   const displayedProjects = showAll ? ProjectsData : ProjectsData.slice(0, 6)
   return (
     <>
-      <section className="grid place-items-center grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <section
+        className="grid place-items-center grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3"
+        id="projects"
+      >
         {displayedProjects.map((project, id) => (
           <PortfolioCard key={id} project={project} />
         ))}
